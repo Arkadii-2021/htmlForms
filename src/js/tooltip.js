@@ -15,7 +15,7 @@ export default class Tooltip {
 
     document.body.appendChild(tooltipElement);
 
-    const { left, top } = element.getBoundingClientRect();
+    const { left } = element.getBoundingClientRect();
 
     tooltipElement.style.left = `${left + (left - element.offsetWidth) / 2 - 12}px`;
     tooltipElement.style.top = `${element.offsetHeight + (element.offsetHeight / 2) + 8}px`;
