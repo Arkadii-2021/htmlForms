@@ -8,15 +8,16 @@ body {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 14px;
     line-height: 1.42857143;
+	margin: 0;
     color: #333;
     background-color: #fff;
 }
 
 .btn {
     display: inline-block;
-	position: absolute;
-	top: 25%;
-	left: 10%;
+	  position: absolute;
+	  top: 150px;
+	  left: 150px;
     font-weight: 400;
     color: #fff;
     text-align: center;
