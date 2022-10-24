@@ -3,8 +3,9 @@ export default class Tooltip {
     this.tooltips = [];
   }
 
-  showTooltip(element) {
+  showTooltip() {
     const tooltipElement = document.createElement('DIV');
+    const btn = document.querySelector('.btn');
 
     tooltipElement.classList.add('popover');
     tooltipElement.innerHTML = "<h3 class='popover-header'>Popover title</h3><div class='arrow'></div><div class='popover-body'>And here's some amazing content. It's very engaging. Right?</div>";
@@ -15,10 +16,12 @@ export default class Tooltip {
 
     document.body.appendChild(tooltipElement);
 
-    const { left } = element.getBoundingClientRect();
+    const {
+      left, top,
+    } = btn.getBoundingClientRect();
 
-    tooltipElement.style.left = `${left + (left - element.offsetWidth) / 2 - 12}px`;
-    tooltipElement.style.top = `${element.offsetHeight + (element.offsetHeight / 2) + 8}px`;
+    tooltipElement.style.left = `${left - (left / 4)}px`;
+    tooltipElement.style.top = `${top - tooltipElement.getBoundingClientRect().height - 13}px`;
   }
 
   removeTooltip() {
